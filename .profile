@@ -50,6 +50,12 @@ alias please=sudo
 alias shit='sudo $(history -p !!)'
 
 # git stuff
+alias gs="git status"
 alias gl="git log --oneline"
-alias guc="git add -u && git commit"
+alias gll="git log --graph --decorate --pretty=oneline --abbrev-commit"
+alias gac="git add -p && git commit --amend --no-edit"
+alias gpf="git push origin HEAD -f"
+
+# pre-commit stuff
+alias pc="pre-commit run --all-files"
 
