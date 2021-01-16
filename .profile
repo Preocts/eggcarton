@@ -26,6 +26,30 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
-PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\] \$\[\033[0m\033[0;32m\] ▶\[\033[0m\] '
+PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\]▶\[\033[0m\033[0;32m\] \$\[\033[0m\] '
 
-alias venv="source ./venv/bin/activate"
+function handle_notes {
+    if [[ $1 = "save" ]]; then
+	currentpwd=$PWD
+	cd ~/personal/notes
+	git commit -am "Notes save"
+	git push origin main
+	cd $currentpwd
+    else
+	vim ~/personal/notes/notes.md
+    fi
+}
+
+alias venv="source ./venv/bin/activate && which python"
+alias notes="handle_notes $1"
+alias backup="~/backup_home.sh"
+alias backup-clean="~/backup_home.sh --delete"
+alias cp="cp -i"
+alias mv="mv -i"
+alias please=sudo
+alias shit='sudo $(history -p !!)'
+
+# git stuff
+alias gl="git log --oneline"
+alias guc="git add -u && git commit"
+
