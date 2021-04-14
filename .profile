@@ -53,7 +53,8 @@ alias shit='sudo $(history -p !!)'
 alias gs="git status"
 alias gl="git log --oneline"
 alias gll="git log --graph --decorate --pretty=oneline --abbrev-commit"
-alias gac="git add -p && git commit --amend --no-edit"
+alias gar="git add -p"
+alias gca="git commit --amend"
 alias gpf="git push origin HEAD -f"
 
 # pre-commit stuff
