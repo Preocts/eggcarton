@@ -46,30 +46,15 @@ au BufNewFile,BufRead *.md
 
 " Vim Plug loader
 call plug#begin('~/.vim/plugged')
-Plug 'gruvbox-community/gruvbox'
 Plug 'haishanh/night-owl.vim'
 Plug 'preservim/nerdtree'
-Plug 'ycm-core/YouCompleteMe'
 Plug 'psf/black', { 'branch': 'stable' }
-Plug 'itchyny/lightline.vim'
-Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Color scheme that doesn't kill the eyes
 colorscheme night-owl
 set background=dark
 highlight Normal guibg=NONE
-
-" Lightline, do I like this?
-let g:lightline = {
-    \ 'active': {
-    \   'left': [ [ 'mode', 'paste' ],
-    \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-    \ },
-    \ 'component_function': {
-    \   'gitbranch': 'FugitiveHead'
-    \ },
-    \ }
 
 " Handy function to trim whitespaces
 fun! TrimWhitespace()
@@ -81,7 +66,6 @@ endfun
 augroup EGGS
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
-    "autocmd VimEnter * NERDTree | wincmd p
     autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
     autocmd BufWritePre *.py execute ':Black'
 augroup END
