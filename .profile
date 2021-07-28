@@ -52,11 +52,19 @@ alias shit='sudo $(history -p !!)'
 # git stuff
 alias gs="git status"
 alias gl="git log --oneline"
-alias gll="git log --graph --decorate --pretty=oneline --abbrev-commit"
-alias gar="git add -p"
-alias gca="git commit --amend"
-alias gpf="git push origin HEAD -f"
 
 # pre-commit stuff
 alias pc="pre-commit run --all-files"
+
+## Pip
+# Ensure that pip can only install to virtualenv's
+export PIP_REQUIRE_VIRTUALENV=true
+
+# Allow global override to install packages via pip
+gpip() {
+    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+}
+
+# Cache packages
+export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
