@@ -40,7 +40,7 @@ function handle_notes {
     fi
 }
 
-alias venv="source ./venv/bin/activate && which python"
+alias venv="source ./venv/bin/activate && which python && python --version"
 alias notes="handle_notes $1"
 alias backup="~/backup_home.sh"
 alias backup-clean="~/backup_home.sh --delete"
@@ -67,4 +67,9 @@ gpip() {
 
 # Cache packages
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+# Sets image display to Windows through imagemagick and vcxsrv
+# sudo apt install imagemagick
+# Powershell admin: choco install vcxsrv
+export DISPLAY=localhost:0.0
 
