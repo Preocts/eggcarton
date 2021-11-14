@@ -48,7 +48,6 @@ au BufNewFile,BufRead *.md
 call plug#begin('~/.vim/plugged')
 Plug 'haishanh/night-owl.vim'
 Plug 'preservim/nerdtree'
-Plug 'psf/black', { 'branch': 'stable' }
 call plug#end()
 
 " Color scheme that doesn't kill the eyes
@@ -67,7 +66,6 @@ augroup EGGS
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
     autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-    autocmd BufWritePre *.py execute ':Black'
 augroup END
 
 " Key remaps
