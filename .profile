@@ -48,6 +48,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias please=sudo
 alias shit='sudo $(history -p !!)'
+alias neil="cowsay Write down everything that happens in the story, and then in your second draft make it look like you knew what you were doing all along."
 
 # git stuff
 alias gs="git status"
