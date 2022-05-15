@@ -53,7 +53,8 @@ call plug#end()
 " Color scheme that doesn't kill the eyes
 colorscheme night-owl
 set background=dark
-highlight Normal guibg=NONE
+" Disabled due to Windows Terminal being funky with backgrounds
+" highlight Normal guibg=NONE
 
 " Handy function to trim whitespaces
 fun! TrimWhitespace()
