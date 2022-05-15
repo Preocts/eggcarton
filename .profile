@@ -28,12 +28,25 @@ fi
 
 PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\]▶\[\033[0m\033[0;32m\] \$\[\033[0m\] '
 
-alias venv="source ./venv/bin/activate && which python && python --version"
+# Build a python venv if needed, otherwise activate existing
+build_venv () {
+    if [ ! -d "venv/" ] ; then
+        python3 -m venv venv
+        . venv/bin/activate
+        python -m pip install pip setuptools wheel
+    fi
+    if [ "$(type -t deactivate)" != "function" ] ; then
+        . venv/bin/activate
+    fi
+    which python
+    python --version
+}
+
+alias venv=build_venv
 alias backup="~/backup_home.sh"
 alias backup-clean="~/backup_home.sh --delete"
 alias cp="cp -i"
 alias mv="mv -i"
-alias please=sudo
 alias shit='sudo $(history -p !!)'
 alias neil="cowsay Write down everything that happens in the story, and then in your second draft make it look like you knew what you were doing all along."
 
