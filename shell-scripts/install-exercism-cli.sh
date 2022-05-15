@@ -1,9 +1,10 @@
 #! bin/bash
-package="exercism-3.0.13-linux-x86_64.tar.gz"
+version="3.0.13"
+package="exercism-$version-linux-x86_64.tar.gz"
 
 get-package() {
     echo "Downloading 3.0.13..."
-    wget https://github.com/exercism/cli/releases/download/v3.0.13/$package
+    wget https://github.com/exercism/cli/releases/download/v$version/$package
 }
 
 install-package() {
