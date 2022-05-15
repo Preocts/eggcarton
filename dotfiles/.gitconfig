@@ -1,0 +1,11 @@
+[user]
+	name = Preocts
+	email = preocts@gmail.com
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+[init]
+	defaultBranch = main
+[core]
+	editor = vim
+[pull]
+	rebase = false
