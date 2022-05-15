@@ -1,0 +1,11 @@
+- 100 GB fixed disk space
+- 8 GB memory
+- 128 MB video memory
+- 4 processors
+- Enable I/O APIC
+- Enable PAE/NX
+- Paravirtualization Interface: Default
+- Enable Nested Paging
+- Disable Graphic Acceleration
+- VMSVGA graphic controller
+
