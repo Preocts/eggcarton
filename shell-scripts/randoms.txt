@@ -1,2 +1,3 @@
 cloc
 cowsay
+neofetch
