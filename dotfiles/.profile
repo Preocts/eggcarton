@@ -57,6 +57,9 @@ alias gl="git log --oneline"
 # pre-commit stuff
 alias pc="pre-commit run --all-files"
 
+## Python REPL
+export PYTHONSTARTUP=~/.python_repl.py
+
 ## Pip
 # Ensure that pip can only install to virtualenv's
 export PIP_REQUIRE_VIRTUALENV=true
