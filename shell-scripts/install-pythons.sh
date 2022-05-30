@@ -14,8 +14,8 @@ apt-update-all() {
 
 apt-install() {
     echo "Installing Python..."
-    apt install -y python3.8 python3.9 python3.10
-    apt install -y python3.8-venv python3.9-venv python3.10-venv
+    apt install -y python3.8 python3.9 python3.10 python3.11
+    apt install -y python3.8-venv python3.9-venv python3.10-venv python3.11-venv
     echo "Done."
 }
 

@@ -1,3 +1,4 @@
 cloc
 cowsay
 neofetch
+zip
