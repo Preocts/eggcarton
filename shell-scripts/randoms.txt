@@ -2,3 +2,7 @@ cloc
 cowsay
 neofetch
 zip
+gcc
+g++
+make
+build-essential
