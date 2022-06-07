@@ -30,7 +30,7 @@ PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[
 
 # Build a python venv if needed, otherwise activate existing
 build_venv () {
-    if [ ! -d "venv/" ] ; then
+   if [ ! -d "venv/" ] ; then
         python3 -m venv venv
         . venv/bin/activate
         python -m pip install pip setuptools wheel
@@ -42,7 +42,31 @@ build_venv () {
     python --version
 }
 
+# Create a new python module project, only if directory is empty
+build_python_project() {
+    if [ ! -z "$(ls -A)" ] ; then
+        echo "Directory is not empty, are you sure this is the place?"
+        return 1
+    fi
+    if [ "$@" = "src" ] ; then
+        git clone https://github.com/preocts/python-src-template .
+    else
+        git clone https://github.com/preocts/python-module-template .
+    fi
+    if [ $? -ne 0 ]; then
+        echo "Failed."
+        return $?
+    fi
+    rm -rf .git
+    git init
+    git checkout -b main
+    build_venv
+    make && make install-dev
+}
+
+
 alias venv=build_venv
+alias python-setup=build_python_project $1
 alias backup="~/backup_home.sh"
 alias backup-clean="~/backup_home.sh --delete"
 alias cp="cp -i"
