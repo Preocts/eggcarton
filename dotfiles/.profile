@@ -48,7 +48,7 @@ build_python_project() {
         echo "Directory is not empty, are you sure this is the place?"
         return 1
     fi
-    if [ "$@" = "src" ] ; then
+    if [ ! -z $@ ] && [ "$@" = "src" ] ; then
         git clone https://github.com/preocts/python-src-template .
     else
         git clone https://github.com/preocts/python-module-template .
