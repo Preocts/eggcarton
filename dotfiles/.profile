@@ -33,7 +33,7 @@ build_venv () {
    if [ ! -d "venv/" ] ; then
         python3 -m venv venv
         . venv/bin/activate
-        python -m pip install pip
+        python -m pip --upgrade install pip
     fi
     if [ "$(type -t deactivate)" != "function" ] ; then
         . venv/bin/activate
@@ -62,7 +62,7 @@ build_python_project() {
 
 
 alias venv=build_venv
-alias python-setup=build_python_project $1
+alias python-setup=build_python_project
 alias backup="~/backup_home.sh"
 alias backup-clean="~/backup_home.sh --delete"
 alias cp="cp -i"
