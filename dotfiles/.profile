@@ -33,7 +33,7 @@ build_venv () {
    if [ ! -d "venv/" ] ; then
         python3 -m venv venv
         . venv/bin/activate
-        python -m pip --upgrade install pip
+        python -m pip install --upgrade pip
     fi
     if [ "$(type -t deactivate)" != "function" ] ; then
         . venv/bin/activate
