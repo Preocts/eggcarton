@@ -1,3 +1,3 @@
 #! bin/bash
 
-xargs sudo apt install < ~/eggcarton/shell-scripts/randoms.txt
+sudo apt install -y $(< ~/eggcarton/shell-scripts/randoms.txt)

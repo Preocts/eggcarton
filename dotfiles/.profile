@@ -59,14 +59,13 @@ build_python_project() {
     python3 -m venv venv
 }
 
-
+alias brag="(cd ~ && python3 braghook.py)"
 alias venv=build_venv
 alias python-setup=build_python_project
-alias backup="~/backup_home.sh"
-alias backup-clean="~/backup_home.sh --delete"
+alias backup="~/.backup_home.sh"
+alias backup-clean="~/.backup_home.sh --delete"
 alias cp="cp -i"
 alias mv="mv -i"
-alias shit='sudo $(history -p !!)'
 alias neil="cowsay Write down everything that happens in the story, and then in your second draft make it look like you knew what you were doing all along. - Neil Gaiman"
 
 # git stuff
@@ -91,3 +90,4 @@ gpip() {
 # Cache packages
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
+neil
