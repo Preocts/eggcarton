@@ -56,8 +56,7 @@ build_python_project() {
     rm -rf .git
     git init
     git checkout -b main
-    build_venv
-    make && make install-dev
+    python3 -m venv venv
 }
 
 

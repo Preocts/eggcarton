@@ -1,4 +1,3 @@
 #! bin/bash
 
-while read line; do apt install -y $line; done < randoms.txt
-
+xargs sudo apt install < ~/eggcarton/shell-scripts/randoms.txt

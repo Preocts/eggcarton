@@ -2,19 +2,19 @@
 
 add-git-core-ppa() {
     echo "Adding git-core PPA..."
-    add-apt-repository -y 'ppa:git-core/ppa'
+    sudo add-apt-repository -y 'ppa:git-core/ppa'
     echo "Done."
 }
 
 apt-update-all() {
     echo "Updating packages..."
-    apt update
+    sudo apt update
     echo "Done."
 }
 
 apt-install() {
     echo "Installing git..."
-    apt install git -y
+    sudo apt install git -y
     echo "Done."
 }
 
