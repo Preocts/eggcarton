@@ -12,6 +12,7 @@ sudo ln -s /mnt/c/Users/preoc/go/bin/npiperelay.exe /usr/local/bin/npiperelay.ex
 Add the following to `.profile`
 
 ```sh
+# 1Password SSH Auth Bridge
 export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
 ALREADY_RUNNING=$(ps -auxww | grep -q "[n]piperelay.exe -ei -s //./pipe/openssh-ssh-agent"; echo $?)
 if [[ $ALREADY_RUNNING != "0" ]]; then
@@ -22,10 +23,3 @@ if [[ $ALREADY_RUNNING != "0" ]]; then
     (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
 fi
 ```
-
-Update `.gitconfig`
-
-```bash
-git config --global core.sshCommand "C:/Windows/System32/OpenSSH/ssh.exe"
-```
-
