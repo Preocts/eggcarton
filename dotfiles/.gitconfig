@@ -1,11 +1,16 @@
 [user]
-	name = Preocts
-	email = preocts@gmail.com
-[credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe
+    name = Preocts
+    email = preocts@preocts.com
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEwrmNCoeJ5mztPvIjRiLGhY1Rhp1M6O7hLjwC2Shd2K
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [core]
-	editor = vim
+    editor = vim
 [pull]
-	rebase = false
+    rebase = false
+[gpg]
+    format = ssh
+[commit]
+    gpgsign = true
+[gpg "ssh"]
+    allowedSignersFile = /home/preocts/.allowed_signers
