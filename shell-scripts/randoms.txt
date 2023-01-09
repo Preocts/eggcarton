@@ -9,3 +9,5 @@ curl
 vim
 wget
 gpg
+socat
+
