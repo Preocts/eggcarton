@@ -59,7 +59,7 @@ build_python_project() {
     python3 -m venv venv
 }
 
-alias brag="(cd ~ && python3 braghook.py)"
+alias brag="(cd ~ && python3 ~/braghook.py)"
 alias venv=build_venv
 alias python-setup=build_python_project
 alias backup="~/.backup_home.sh"
@@ -89,5 +89,11 @@ gpip() {
 
 # Cache packages
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
+
+# Golang setup
+export GOROOT=$HOME/.local/bin/go
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
 
 neil
