@@ -9,6 +9,7 @@ RUN_ORDER = [
     "install-braghook.sh",
     "install-npm_yarn.sh",
     "install-go.sh",
+    "install-docker.sh",
     # "install-1password.sh",
     # "install-exercism-cli.sh",
     # "install-vscode.sh",
