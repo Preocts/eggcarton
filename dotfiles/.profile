@@ -84,7 +84,7 @@ export PIP_REQUIRE_VIRTUALENV=true
 
 # Allow global override to install packages via pip
 gpip() {
-    PIP_REQUIRE_VIRTUALENV="" pip "$@"
+    PIP_REQUIRE_VIRTUALENV="" python3 -m pip "$@"
 }
 
 # Cache packages
