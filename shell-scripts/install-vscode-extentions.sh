@@ -21,6 +21,5 @@ code --install-extension ms-toolsai.vscode-jupyter-slideshow
 code --install-extension oderwat.indent-rainbow
 code --install-extension redhat.vscode-commons
 code --install-extension redhat.vscode-yaml
-code --install-extension ritwickdey.LiveServer
-code --install-extension swyphcosmo.spellchecker
 code --install-extension yzhang.markdown-all-in-one
+
