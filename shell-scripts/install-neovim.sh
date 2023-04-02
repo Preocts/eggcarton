@@ -10,9 +10,11 @@ echo "Clone repo and selecting stable branch for build"
 git clone https://github.com/neovim/neovim
 cd neovim
 git checkout stable
+
+echo "Building with Release compiler flags"
 make CMAKE_BUILD_TYPE=Release
 
-echo "Installing Neovim with debug flags to default location /usr/local"
+echo "Installing Neovim to default location /usr/local"
 sudo make install
 
 echo "Cleaning up"
