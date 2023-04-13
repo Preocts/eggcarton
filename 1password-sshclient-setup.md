@@ -1,4 +1,15 @@
-### Setup SSH piping to windows
+## Setup SSH piping to windows
+
+### Windows Requirements:
+
+Update OpenSSH for windows:
+
+- Download [Scoop](https:scoop.sh/Scoop)
+- `scoop install openssh`
+- Follow additional instructions
+- Reboot
+
+### Ubuntu Requirements:
 
 Requires Go
 Requires socat
