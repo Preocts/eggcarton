@@ -1,8 +1,8 @@
 import subprocess
 
 RUN_ORDER = [
+    "install-required.sh",
     "install-dotfiles.sh",
-    "install-randoms.sh",
     "install-vim-plug.sh",
     "install-git.sh",
     "install-pythons.sh",
