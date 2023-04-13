@@ -1,0 +1,16 @@
+- name: Install common packages.
+  ansible.builtin.apt:
+    name:
+      - cloc
+      - cowsay
+      - zip
+      - gcc
+      - g++
+      - make
+      - build-essential
+      - curl
+      - vim
+      - wget
+      - gpg
+      - socat
+  become: true
