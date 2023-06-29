@@ -68,9 +68,9 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias neil="cowsay Write down everything that happens in the story, and then in your second draft make it look like you knew what you were doing all along. - Neil Gaiman"
 
-# git stuff
-alias gs="git status"
-alias gl="git log --oneline"
+# git stuff (removed)
+alias gs="echo go gs yourself there buddy..."
+alias gl="echo glhv with that old alias..."
 
 # pre-commit stuff
 alias pc="pre-commit run --all-files"
@@ -107,3 +107,4 @@ if [[ $ALREADY_RUNNING != "0" ]]; then
 fi
 
 neil
+. "$HOME/.cargo/env"
