@@ -1,6 +1,6 @@
 #! bin/bash
 
-nodever="14.x"
+nodever="18.x"
 
 # Install node.js and npm apt repository
 curl -sL https://deb.nodesource.com/setup_$nodever | sudo bash -
