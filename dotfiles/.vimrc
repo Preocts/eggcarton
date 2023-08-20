@@ -47,12 +47,13 @@ au BufNewFile,BufRead *.md
 " Vim Plug loader
 call plug#begin('~/.vim/plugged')
 Plug 'haishanh/night-owl.vim'
+Plug 'macguirerintoul/night_owl_light.vim'
 Plug 'preservim/nerdtree'
 call plug#end()
 
 " Color scheme that doesn't kill the eyes
-colorscheme night-owl
-set background=dark
+colorscheme night_owl_light
+" set background=dark
 " Disabled due to Windows Terminal being funky with backgrounds
 " highlight Normal guibg=NONE
 
