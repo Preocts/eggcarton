@@ -55,7 +55,7 @@ call plug#end()
 colorscheme night_owl_light
 " set background=dark
 " Disabled due to Windows Terminal being funky with backgrounds
-" highlight Normal guibg=NONE
+highlight Normal guibg=NONE
 
 " Handy function to trim whitespaces
 fun! TrimWhitespace()
