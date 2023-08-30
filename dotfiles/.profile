@@ -56,7 +56,7 @@ build_python_project() {
     rm -rf .git
     git init
     git checkout -b main
-    python3 -m venv venv
+    build_venv
 }
 
 alias brag="(cd ~ && python3 ~/braghook.py)"
