@@ -59,6 +59,12 @@ build_python_project() {
     build_venv
 }
 
+randomize_timezone() {
+    tz=$(find /usr/share/zoneinfo/Etc -name 'GMT-*' | shuf -n 1 | grep -o "Etc/.*")
+    echo "Setting timezone to random choice: $tz"
+    export TZ=$tz
+}
+
 alias brag="(cd ~ && python3 ~/braghook.py)"
 alias venv=build_venv
 alias python-setup=build_python_project
@@ -67,6 +73,8 @@ alias backup-clean="~/.backup_home.sh --delete"
 alias cp="cp -i"
 alias mv="mv -i"
 alias neil="cowsay Write down everything that happens in the story, and then in your second draft make it look like you knew what you were doing all along. - Neil Gaiman"
+alias randomtz="randomize_timezone"
+alias resettz="unset TZ"
 
 # git stuff (removed)
 alias gs="echo go gs yourself there buddy..."
