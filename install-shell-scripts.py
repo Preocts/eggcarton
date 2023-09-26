@@ -7,7 +7,7 @@ RUN_ORDER = [
     "install-git.sh",
     "install-pythons.sh",
     "install-braghook.sh",
-    "install-npm_yarn.sh",
+    "install-node-npm.sh",
     "install-go.sh",
     "install-docker.sh",
     # "install-1password.sh",
