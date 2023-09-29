@@ -1,3 +1,5 @@
+require("preocts.util")
+
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
@@ -13,3 +15,11 @@ vim.keymap.set("n", "Q", "<nop>")
 -- Use the system register for yank
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
+
+vim.keymap.set("n", "<leader>f", RunFormatCommand)
+
+-- Shift indents
+-- vim.keymap.set("n", "<C-]>", ">>")
+-- vim.keymap.set("v", "<C-]>", ">>")
+-- vim.keymap.set("n", "<C-[>", "<<")
+-- vim.keymap.set("v", "<C-[>", "<<")
