@@ -18,10 +18,20 @@ apt-install() {
     echo "Done."
 }
 
+dpkg-install-delta() {
+    echo "Install delta for git..."
+    curl --silent --show-error --location https://github.com/dandavison/delta/releases/download/0.16.5/git-delta-musl_0.16.5_amd64.deb -o delta.deb
+    sudo dpkg --install delta.deb
+    rm delta.deb
+    echo "Done."
+}
+
 add-git-core-ppa
 apt-update-all
 apt-install
+dpkg-install-delta
 
 git --version
+delta --version
 
 echo "End of line."
