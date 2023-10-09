@@ -2,15 +2,38 @@
     name = Preocts
     email = preocts@preocts.com
     signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEwrmNCoeJ5mztPvIjRiLGhY1Rhp1M6O7hLjwC2Shd2K
+
 [init]
     defaultBranch = main
+
 [core]
     editor = vim
+    pager = delta
+
 [pull]
     rebase = false
+
 [gpg]
     format = ssh
+
 [commit]
     gpgsign = true
+
 [gpg "ssh"]
     allowedSignersFile = /home/preocts/.allowed_signers
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    light = true  # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+[alias]
+	new = log --oneline main..HEAD
+	missing = log --oneline HEAD..main
