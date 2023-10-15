@@ -13,3 +13,6 @@ sudo apt install -y vim
 sudo apt install -y wget
 sudo apt install -y gpg
 sudo apt install -y socat
+sudo apt install -y fd-find
+sudo apt install -y ripgrep
+
