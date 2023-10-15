@@ -19,13 +19,7 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
---    use ({
---        "catppuccin/nvim",
---        as = "catppuccin",
---        config = function()
---            vim.cmd('colorscheme catppuccin-latte')
---        end
---    })
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
 
     use ({
         'macguirerintoul/night_owl_light.vim',
