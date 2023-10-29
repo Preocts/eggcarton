@@ -25,6 +25,5 @@ code --install-extension otovo-oss.htmx-tags
 code --install-extension redhat.vscode-yaml
 code --install-extension sdras.night-owl
 code --install-extension stkb.rewrap
-code --install-extension tamasfe.even-better-toml
 code --install-extension usernamehw.errorlens
 code --install-extension yzhang.markdown-all-in-one
