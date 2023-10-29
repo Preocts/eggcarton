@@ -31,7 +31,7 @@ PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[
 # Build a python venv if needed, otherwise activate existing
 build_venv () {
    if [ ! -d "venv/" ] ; then
-        python3 -m venv venv
+        python3.11 -m venv venv
         . venv/bin/activate
         python -m pip install --upgrade pip
     fi
