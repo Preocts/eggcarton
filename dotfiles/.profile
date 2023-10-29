@@ -116,3 +116,5 @@ fi
 
 neil
 . "$HOME/.cargo/env"
+
+source .profile.env
