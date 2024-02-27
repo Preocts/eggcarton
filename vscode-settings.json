@@ -4,14 +4,14 @@
         "editor.tabSize": 2,
     },
     "[html]": {
-        "editor.tabSize": 2,
+        "editor.tabSize": 2
     },
     "[python]": {
         "editor.rulers": [
-            88,
+            88
         ],
         "editor.defaultFormatter": "ms-python.black-formatter",
-        "editor.formatOnSave": true,
+        "editor.formatOnSave": true
     },
     "black-formatter.importStrategy": "fromEnvironment",
     "flake8.importStrategy": "fromEnvironment",
@@ -40,13 +40,12 @@
     "editor.fontFamily": "'NovaMono', 'Roboto Mono', Consolas, 'Courier New', monospace",
     "editor.fontLigatures": false,
     "editor.fontSize": 16,
-    "editor.formatOnSave": true,
     "editor.inlineSuggest.enabled": true,
     "editor.minimap.enabled": false,
     "editor.minimap.maxColumn": 50,
     "editor.minimap.renderCharacters": false,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.occurrencesHighlight": false,
+    "editor.occurrencesHighlight": "off",
     "editor.renderControlCharacters": false,
     "editor.suggestSelection": "first",
     "eslint.format.enable": true,
@@ -54,10 +53,10 @@
     "extensions.ignoreRecommendations": true,
     "github.copilot.enable": {
         "*": true,
-        "plaintext": true,
+        "plaintext": false,
         "markdown": false,
         "scminput": false,
-        "yaml": true,
+        "yaml": false,
         "properties": true,
         "python": true,
         "ini": false,
@@ -79,7 +78,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "telemetry.telemetryLevel": "off",
     "testing.saveBeforeTest": false,
-    "workbench.colorTheme": "Night Owl Light (No Italics)",
+    "workbench.colorTheme": "Catppuccin Latte",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -89,7 +88,9 @@
     "yaml.schemas": {
         "https://squidfunk.github.io/mkdocs-material/schema.json": "mkdocs.yml"
     },
-    "workbench.iconTheme": "eq-material-theme-icons",
+    "workbench.iconTheme": "catppuccin-latte",
     "html.format.enable": false,
     "errorLens.onSave": true,
+    "remote.autoForwardPortsSource": "hybrid",
+    "python.REPL.enableREPLSmartSend": false,
 }
