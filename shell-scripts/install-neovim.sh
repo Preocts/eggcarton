@@ -21,9 +21,5 @@ echo "Cleaning up"
 cd ..
 rm -rf neovim
 
-echo "Installing packer: Package manager for neovim"
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
 echo "End of line."
 
