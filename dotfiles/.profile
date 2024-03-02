@@ -104,6 +104,7 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 # 1Password SSH Auth Bridge
+mkdir -p $HOME/.ssh
 export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
 ALREADY_RUNNING=$(ps -auxww | grep -q "[n]piperelay.exe -ei -s //./pipe/openssh-ssh-agent"; echo $?)
 if [[ $ALREADY_RUNNING != "0" ]]; then
@@ -115,6 +116,5 @@ if [[ $ALREADY_RUNNING != "0" ]]; then
 fi
 
 neil
-. "$HOME/.cargo/env"
 
 source .profile.env
