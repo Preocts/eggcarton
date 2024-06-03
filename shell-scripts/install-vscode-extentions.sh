@@ -3,11 +3,8 @@
 # Generated with:
 # code --list-extensions | xargs -L 1 echo code --install-extension
 code --install-extension ops.terraform
-code --install-extension catppuccin.catppuccin-vsc
 code --install-extension catppuccin.catppuccin-vsc-icons
 code --install-extension dbaeumer.vscode-eslint
-code --install-extension github.copilot
-code --install-extension github.copilot-chat
 code --install-extension golang.go
 code --install-extension hashicorp.terraform
 code --install-extension janisdd.vscode-edit-csv
