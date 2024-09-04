@@ -1,7 +1,7 @@
 {
     "[javascript]": {
         "editor.maxTokenizationLineLength": 2500,
-        "editor.tabSize": 2,
+        "editor.tabSize": 2
     },
     "[html]": {
         "editor.tabSize": 2
@@ -19,19 +19,6 @@
     "mypy-type-checker.path": [
         "${workspaceFolder}/venv/bin/mypy"
     ],
-    "audioCues.diffLineDeleted": "off",
-    "audioCues.diffLineInserted": "off",
-    "audioCues.lineHasBreakpoint": "off",
-    "audioCues.lineHasError": "off",
-    "audioCues.lineHasFoldedArea": "off",
-    "audioCues.lineHasInlineSuggestion": "off",
-    "audioCues.noInlayHints": "off",
-    "audioCues.notebookCellCompleted": "off",
-    "audioCues.notebookCellFailed": "off",
-    "audioCues.onDebugBreak": "off",
-    "audioCues.taskCompleted": "off",
-    "audioCues.taskFailed": "off",
-    "audioCues.terminalQuickFix": "off",
     "errorLens.followCursor": "allLinesExceptActive",
     "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": false,
@@ -51,17 +38,6 @@
     "eslint.format.enable": true,
     "eslint.run": "onSave",
     "extensions.ignoreRecommendations": true,
-    "github.copilot.enable": {
-        "*": true,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false,
-        "yaml": false,
-        "properties": true,
-        "python": true,
-        "ini": false,
-        "json": false
-    },
     "launch": {},
     "javascript.updateImportsOnFileMove.enabled": "always",
     "notebook.cellToolbarLocation": {
@@ -78,7 +54,7 @@
     "security.workspace.trust.untrustedFiles": "open",
     "telemetry.telemetryLevel": "off",
     "testing.saveBeforeTest": false,
-    "workbench.colorTheme": "Catppuccin Latte",
+    "workbench.colorTheme": "Night Owl Light (No Italics)",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -91,6 +67,44 @@
     "workbench.iconTheme": "catppuccin-latte",
     "html.format.enable": false,
     "errorLens.onSave": true,
-    "remote.autoForwardPortsSource": "hybrid",
-    "python.REPL.enableREPLSmartSend": false,
+    "accessibility.signals.lineHasError": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasFoldedArea": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasBreakpoint": {
+        "sound": "off"
+    },
+    "accessibility.signals.lineHasInlineSuggestion": {
+        "sound": "off"
+    },
+    "accessibility.signals.terminalQuickFix": {
+        "sound": "off"
+    },
+    "accessibility.signals.onDebugBreak": {
+        "sound": "off"
+    },
+    "accessibility.signals.noInlayHints": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskCompleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.taskFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.notebookCellCompleted": {
+        "sound": "off"
+    },
+    "accessibility.signals.notebookCellFailed": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineInserted": {
+        "sound": "off"
+    },
+    "accessibility.signals.diffLineDeleted": {
+        "sound": "off"
+    },
+    "editor.stickyScroll.enabled": false,
 }
