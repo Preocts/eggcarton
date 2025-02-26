@@ -1,7 +1,7 @@
 [user]
     name = Preocts
     email = preocts@preocts.com
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIUw35dNRc35tFjXEdEzM9+oTV/oN75heXgEuy0TblyQ preocts@preocts.com
+	signingkey = /home/preocts/.ssh/id_ed25519.pub
 
 [init]
     defaultBranch = main
@@ -34,6 +34,7 @@
 
 [diff]
     colorMoved = default
+
 [alias]
 	new = log --oneline main..HEAD
 	missing = log --oneline HEAD..main
