@@ -46,7 +46,6 @@ au BufNewFile,BufRead *.md
 
 " Vim Plug loader
 call plug#begin('~/.vim/plugged')
-Plug 'haishanh/night-owl.vim'
 Plug 'macguirerintoul/night_owl_light.vim'
 Plug 'preservim/nerdtree'
 call plug#end()

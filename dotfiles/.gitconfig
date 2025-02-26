@@ -1,7 +1,7 @@
 [user]
     name = Preocts
     email = preocts@preocts.com
-    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEwrmNCoeJ5mztPvIjRiLGhY1Rhp1M6O7hLjwC2Shd2K
+    signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIUw35dNRc35tFjXEdEzM9+oTV/oN75heXgEuy0TblyQ preocts@preocts.com
 
 [init]
     defaultBranch = main

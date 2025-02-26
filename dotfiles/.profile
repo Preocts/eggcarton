@@ -30,13 +30,12 @@ PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[
 
 # Build a python venv if needed, otherwise activate existing
 build_venv () {
-   if [ ! -d "venv/" ] ; then
-        python3.12 -m venv venv
-        . venv/bin/activate
-        python -m pip install --upgrade pip
+    if [ ! -d ".venv/" ] ; then
+        python3.12 -m venv .venv --upgrade-deps
+        . .venv/bin/activate
     fi
     if [ "$(type -t deactivate)" != "function" ] ; then
-        . venv/bin/activate
+        . .venv/bin/activate
     fi
     which python
     python --version
@@ -83,9 +82,6 @@ alias gl="echo glhv with that old alias..."
 # pre-commit stuff
 alias pc="pre-commit run --all-files"
 
-## Python REPL
-export PYTHONSTARTUP=~/.python_repl.py
-
 ## Pip
 # Ensure that pip can only install to virtualenv's
 export PIP_REQUIRE_VIRTUALENV=true
@@ -102,18 +98,6 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 export GOROOT=$HOME/.local/bin/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-
-# 1Password SSH Auth Bridge
-mkdir -p $HOME/.ssh
-export SSH_AUTH_SOCK=$HOME/.ssh/agent.sock
-ALREADY_RUNNING=$(ps -auxww | grep -q "[n]piperelay.exe -ei -s //./pipe/openssh-ssh-agent"; echo $?)
-if [[ $ALREADY_RUNNING != "0" ]]; then
-    if [[ -S $SSH_AUTH_SOCK ]]; then        echo "removing previous socket..."
-        rm $SSH_AUTH_SOCK
-    fi
-    echo "Starting SSH-Agent relay..."
-    (setsid socat UNIX-LISTEN:$SSH_AUTH_SOCK,fork EXEC:"npiperelay.exe -ei -s //./pipe/openssh-ssh-agent",nofork &) >/dev/null 2>&1
-fi
 
 neil
 

@@ -6,5 +6,4 @@ gpip install pipx --break-system-packages
 
 pipx install pre-commit
 pipx install nox
-pipx install git+https://github.com/Preocts/daystats
 

@@ -1,5 +1,5 @@
 #! bin/bash
-version="go1.19.4.linux-amd64.tar.gz"
+version="go1.23.4.linux-amd64.tar.gz"
 
 wget https://dl.google.com/go/$version
 tar -xvf $version

@@ -1,5 +1,0 @@
-- name: Copy dot files.
-  ansible.builtin.copy:
-    src: ../../../dotfiles/
-    dest: $HOME
-    backup: true
