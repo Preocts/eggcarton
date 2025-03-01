@@ -75,12 +75,10 @@ alias neil="cowsay Write down everything that happens in the story, and then in 
 alias randomtz="randomize_timezone"
 alias resettz="unset TZ"
 
-# git stuff (removed)
-alias gs="echo go gs yourself there buddy..."
-alias gl="echo glhv with that old alias..."
-
-# pre-commit stuff
-alias pc="pre-commit run --all-files"
+# eza alias
+alias ls="eza --long --classify --all --group-directories-first --time-style=long-iso --git $@"
+alias lg="eza --long --classify --all --group-directories-first --time-style=long-iso --git --git-ignore $@"
+alias lt="eza --long --classify --all --group-directories-first --time-style=long-iso --git --tree --time-style=long-iso $@"
 
 ## Pip
 # Ensure that pip can only install to virtualenv's
@@ -101,4 +99,3 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
 neil
 
-source .profile.env
