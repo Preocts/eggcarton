@@ -14,6 +14,7 @@ sudo apt install -y wget
 sudo apt install -y gpg
 sudo apt install -y socat
 sudo apt install -y fd-find
+sudo apt install -y ripgrep
 ln -s $(which fdfind) ~/.local/bin/fd
 sudo apt install -y ripgrep
 
