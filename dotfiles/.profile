@@ -97,5 +97,6 @@ export GOROOT=$HOME/.local/bin/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 
+# neil
 neil
 
