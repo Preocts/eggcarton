@@ -21,7 +21,6 @@ apt-install() {
 
 add-deadsnakes-ppa
 apt-update-all
-apt-install
 
 echo "End of line."
 
