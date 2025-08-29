@@ -28,15 +28,13 @@ fi
 
 PS1='\[\033[0;32m\]\[\033[0m\033[0;32m\]\u\[\033[0;36m\] @ \[\033[0;36m\]\h \w\[\033[0;32m\]$(__git_ps1)\n\[\033[0;32m\]└─\[\033[0m\033[0;32m\]▶\[\033[0m\033[0;32m\] \$\[\033[0m\] '
 
-# Build a python venv if needed, otherwise activate existing
-build_venv () {
+# Enter a .venv/ if available
+enter_venv () {
     if [ ! -d ".venv/" ] ; then
-        python3.12 -m venv .venv --upgrade-deps
-        . .venv/bin/activate
+        echo "No .venv/ detected"
+        return 1
     fi
-    if [ "$(type -t deactivate)" != "function" ] ; then
-        . .venv/bin/activate
-    fi
+    . .venv/bin/activate
     which python
     python --version
 }
@@ -55,7 +53,7 @@ build_python_project() {
     rm -rf .git
     git init
     git checkout -b main
-    build_venv
+    nox --session dev
 }
 
 randomize_timezone() {
@@ -65,7 +63,7 @@ randomize_timezone() {
 }
 
 alias brag="(cd ~ && python3 ~/braghook.py)"
-alias venv=build_venv
+alias venv=enter_venv
 alias python-setup=build_python_project
 alias backup="~/.backup_home.sh"
 alias backup-clean="~/.backup_home.sh --delete"
