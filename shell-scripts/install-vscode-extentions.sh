@@ -5,6 +5,7 @@
 code --install-extension ops.terraform
 code --install-extension catppuccin.catppuccin-vsc-icons
 code --install-extension dbaeumer.vscode-eslint
+code --install-extension editorconfig.editorconfig
 code --install-extension golang.go
 code --install-extension hashicorp.terraform
 code --install-extension janisdd.vscode-edit-csv
