@@ -15,6 +15,6 @@ sudo apt install -y gpg
 sudo apt install -y socat
 sudo apt install -y fd-find
 sudo apt install -y ripgrep
+sudo apt install -y jq
 ln -s $(which fdfind) ~/.local/bin/fd
 sudo apt install -y ripgrep
-
