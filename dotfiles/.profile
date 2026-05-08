@@ -74,7 +74,8 @@ alias randomtz="randomize_timezone"
 alias resettz="unset TZ"
 
 # eza alias
-alias ls="eza --long --classify --all --group-directories-first --time-style=long-iso --git $@"
+alias ls="eza --long --classify --group-directories-first --time-style=long-iso --git $@"
+alias la="eza --long --classify --all --group-directories-first --time-style=long-iso --git $@"
 alias lg="eza --long --classify --all --group-directories-first --time-style=long-iso --git --git-ignore $@"
 alias lt="eza --long --classify --all --group-directories-first --time-style=long-iso --git --tree --time-style=long-iso $@"
 
@@ -94,6 +95,11 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 export GOROOT=$HOME/.local/bin/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
 
 # Start ssh client
 ssh-agent -s
