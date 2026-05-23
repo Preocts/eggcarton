@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [ -d "$HOME/repos" ]; then
+    echo "$HOME/repos exists, halting backup."
+    return 1
+fi
+
+mkdir "$HOME/repos"
+
+prior=$(pwd)
+echo "Moving to $HOME/repos to start backup (from $prior)"
+cd "$HOME/repos"
+
+gh repo list --limit 1000 --json name,nameWithOwner,createdAt,archivedAt,isArchived,isPrivate > repolist.json
+
+echo "Discovered $(jq .[].nameWithOwner < repolist.json | wc -l) repos to back up..."
+
+jq -r .[].nameWithOwner < repolist.json | xargs -I % git clone --bare --no-hardlinks git@github.com:%
+jq -r .[].name < repolist.json | xargs -I % tar -czf %.git.tar.gz %.git/
+jq -r .[].name < repolist.json | xargs -I % rm -rf %.git/
+
+echo "All repos archived in $HOME/repos"
+
+cd "$prior"
+
